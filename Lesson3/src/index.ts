@@ -3,7 +3,7 @@
 // --------------------------------------------------------------------
 
 
-// npm install -g typescript tsc ----> установка глобально typescript
+// npm install -g typescript ----> установка глобально typescript
 // tsc --init ----> проинициализироовать typescript конфиг
 // create filename.ts ----> файлы создаются с расширением .ts
 // tsc filename.ts ----> компиляция конкретного файла
