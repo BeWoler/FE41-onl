@@ -62,9 +62,19 @@ const averageStudents = totalNumStudents / objectToArray.length;
 
 console.log(averageStudents);
 
-  // #5
+  // #4
 
+  const arrSubjects = subjectsKeys.map((item) => {
+    return {
+      name: item,
+      students: subjects[item].students,
+      teachers: subjects[item].teachers
+    };
+  });
 
-const sortedTeachers = objectToArray.sort((a, b) => b.teachers - a.teachers);
+  console.log(arrSubjects);
+
+// #5
+
+const sortedTeachers = arrSubjects.sort((a, b) => b.teachers - a.teachers);
   console.log(sortedTeachers);
-
