@@ -45,12 +45,13 @@ const numOfSubjects = objectValue.length;
 const averageAmountofStudents = studentsSum / numOfSubjects;
 console.log(`averageAmountofStudents ${averageAmountofStudents}`);
 
-//4 не работает 
-for(let item of subjectsKeys){
+//4 заработало
     let i = 0;
+    
+let subjectsFull =  subjectsKeys.map((item) => {
     let subjectInfo = objectValue[i];
-    item = (`name: ${item}: students: ${subjectInfo.students}, teachers: ${subjectInfo.teachers}`)
     i++;
-};
-console.log(subjectsKeys);
-//5 связанно с 4 по этому тоже не работает 
+    return item = (`name: ${item}: students: ${subjectInfo.students}, teachers: ${subjectInfo.teachers}`)
+})
+console.log(subjectsFull);
+//5 не придумал
