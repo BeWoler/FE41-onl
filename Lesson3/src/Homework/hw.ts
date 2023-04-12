@@ -20,7 +20,7 @@ const numSum = (a: number, b: number): number => {
 
 // 3
 
-const anyFunc = (): any => {
+const anyFunc = (): never => {
   return anyFunc();
 };
 
