@@ -1,0 +1,22 @@
+.user {
+    font-size: 30px;
+    color: blueviolet;
+    animation: user 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes user {
+    0%{
+        color: black;
+        transform: translateX(0);
+    }
+    50%{
+        color: rgb(240, 9, 9);
+    }
+    100%{
+        color: rgb(250, 213, 5);
+        transform: translateX(300px);
+    }
+}

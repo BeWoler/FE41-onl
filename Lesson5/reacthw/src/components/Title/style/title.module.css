@@ -1,0 +1,22 @@
+.title {
+    font-size: 30px;
+    color: brown;
+    animation: title 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes title {
+    0%{
+        color: rgb(238, 10, 170);
+        transform: translateY(0);
+    }
+    50%{
+        color: rgb(29, 233, 107);
+    }
+    100%{
+        color: rgb(4, 59, 240);
+        transform: translateY(300px);
+    }
+}
