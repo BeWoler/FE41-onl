@@ -1,5 +1,5 @@
 // Установить тс с нуля (описание в index.ts)
-// Протипизировать данные
+// Typed the data
 // По возможности использовать интерфейсы при необходимости
 
 
@@ -23,7 +23,7 @@ const obj: IObjFirst = {
   
   // 3
   
-  const anyFunc = (): any => {
+  const anyFunc = (): never => {
     return anyFunc();
   };
   
@@ -78,6 +78,3 @@ const obj: IObjFirst = {
       available: true,
     },
   ];
-  
-  
-
