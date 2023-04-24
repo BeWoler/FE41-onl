@@ -1,0 +1,9 @@
+.title {
+    font-size: 30px;
+    color: brown;
+    animation: title 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
