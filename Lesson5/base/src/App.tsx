@@ -1,4 +1,3 @@
-import { resourceLimits } from "worker_threads";
 import Header from "./components/Header";
 
 const App = () => {
