@@ -1,11 +1,4 @@
-import { useState } from "react";
-import PostItem from "../PostItem/PostItem";
 import PostList from "../PostList/PostList";
-
-interface IHeaderProps {
-  title: string;
-  number?: number;
-}
 
 const data = [
   { id: 1, title: 'First post', author: 'King' },
@@ -21,20 +14,9 @@ const data = [
 ]
 
 const MainPage = () => {
-  const [obj, setObj] = useState<IHeaderProps>({
-    title: "Header",
-    number: 0,
-  });
-  const [isActive, setIsActive] = useState(true);
   return (
     <div>
       <PostList dataList={data} />
-    <div
-        onClick={() => {
-          setObj({ ...obj, title: obj.title });
-          console.log(obj);
-        }}>
-    </div>
     </div>
   );
 };

@@ -1,7 +1,14 @@
 .listitem{
+  border: 3px solid #577492;
+  list-style: none;
+  cursor: pointer;
+}
+.title {
   font-family: "Open Sans", sans-serif;
-    font-size: 40px;
-    line-height: 44px;
-    font-weight: 700;
-    color: #553e70;
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 700;
+  color: #577492;
+  text-decoration: none;
+  text-transform: capitalize;
 }

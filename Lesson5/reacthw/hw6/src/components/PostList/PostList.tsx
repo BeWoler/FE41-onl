@@ -1,16 +1,13 @@
 import React from "react";
 import PostItem from "../PostItem/PostItem";
+import style from "./style/PostList.module.css";
 
 const PostList = ({ dataList }: any) => {
   return (
-      <ul>
+    <ul className={style.list}>
         {dataList.map((item: any) => {
           return (
              PostItem(item)
-            // <li key={item.id}>
-            //   <h2>{item.title}</h2>
-            //   <h4>{item.author}</h4>
-            // </li>
           );
         })}
       </ul>
