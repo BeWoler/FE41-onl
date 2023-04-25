@@ -1,0 +1,17 @@
+.header {
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400;
+  padding: 20px;
+  border: 3px solid black;
+  border-radius: 15px;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+.header__User {
+  color: green;
+}
+.header__Title {
+  color: red;
+}/*# sourceMappingURL=style.css.map */
