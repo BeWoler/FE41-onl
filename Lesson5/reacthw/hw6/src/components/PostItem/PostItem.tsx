@@ -6,7 +6,6 @@ const PostItem = (props: IPostItemProps) => {
     <li
       className={style.listitem}>
       <p>{props.title}</p>
-      <p>{props.author}</p>
     </li>
   );
 };

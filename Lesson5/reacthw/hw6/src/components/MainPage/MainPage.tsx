@@ -1,11 +1,10 @@
 import { useState } from "react";
-import Title from "../Title/Title";
-import Nav from "../Nav/Nav";
-import Form from "../Form/Form";
+import PostItem from "../PostItem/PostItem";
+import PostList from "../PostList/PostList";
 
-interface IMainPageProps {
-  id: number;
-  author: string;
+interface IHeaderProps {
+  title: string;
+  number?: number;
 }
 
 const data = [
@@ -22,25 +21,22 @@ const data = [
 ]
 
 const MainPage = () => {
-  const [obj, setObj] = useState<IMainPageProps>({
-    id: 0,
-    author: "string",
+  const [obj, setObj] = useState<IHeaderProps>({
+    title: "Header",
+    number: 0,
   });
-  const [isActive, setIsActive] = useState(false);
-
+  const [isActive, setIsActive] = useState(true);
   return (
     <div>
-      <div dataList={data} />
-      <div
+      <PostList dataList={data} />
+    <div
         onClick={() => {
-          setObj({ ...obj, alert obj.id});
+          setObj({ ...obj, title: obj.title });
           console.log(obj);
         }}>
-        <div>{obj.id}</div>
-        <div>{obj.author}</div>
-      </div>
+    </div>
     </div>
   );
 };
 
-export default Header;
+export default MainPage;
