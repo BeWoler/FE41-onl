@@ -1,6 +1,6 @@
 
 interface IPostItem {
-    post?: string;
+    post: string;
     handler: () => void;
 }
 
