@@ -8,10 +8,24 @@
   width: 100px;
   display: block;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 .header__User {
   color: green;
 }
 .header__Title {
   color: red;
+}
+
+.post {
+  border: 3px solid rgb(208, 208, 208);
+  border-radius: 10px;
+  max-width: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-color: black;
+  margin: auto;
 }/*# sourceMappingURL=style.css.map */

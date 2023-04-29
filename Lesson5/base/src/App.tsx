@@ -1,14 +1,12 @@
 import { resourceLimits } from "worker_threads";
 import Header from "./components/Header";
-
-const Func = () => {
-    let torf = window.confirm('t or f');
-    return (torf);
-}
+import Post from "./components/Post";
+import PostList from "./components/PostList";
 const App = () => {
     return(
         <div>
-            <Header isAuth={Func()}/>
+            <Header isAuth={true}/>
+            <PostList/>
         </div>
     )
 }
