@@ -1,11 +1,12 @@
 import React from 'react';
-import Header from './components/Header/Header';
+import './styles/App.css'
+import MainPage from './components/MainPage/MainPage';
 
 
 function App() {
   return (
     <div>
-      <Header isAuth = {true} />
+      <MainPage/>
     </div>
   );
 }
