@@ -1,13 +1,16 @@
 
 interface IPostItem {
-    post: string;
-    handler: () => void;
+    id: number;
+    title: string;
+    author: string;
 }
 
-const PostItem = ({ post, handler }: IPostItem) => {
+const PostItem = ({ id, title, author }: IPostItem) => {
     return (
-        <div onClick={handler}>
-            {post}
+        <div>
+            <div>{id}</div>
+            <div>{title}</div>
+            <div>{author}</div>
         </div>
     )
 }
