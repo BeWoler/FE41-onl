@@ -1,0 +1,13 @@
+.button {
+  cursor: pointer;
+  background-color: aqua;
+  transition: all ease 1s;
+}
+
+.button:hover {
+  background-color: brown;
+}
+
+.disabled {
+  background-color: gray;
+}
