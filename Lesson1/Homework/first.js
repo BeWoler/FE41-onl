@@ -46,12 +46,20 @@ const averageAmountofStudents = studentsSum / numOfSubjects;
 console.log(`averageAmountofStudents ${averageAmountofStudents}`);
 
 //4 заработало
-    let i = 0;
+
+let i = 0;
     
 let subjectsFull =  subjectsKeys.map((item) => {
     let subjectInfo = objectValue[i];
     i++;
-    return item = (`name: ${item}: students: ${subjectInfo.students}, teachers: ${subjectInfo.teachers}`)
+    return item = ({'name': item, 'students': subjectInfo.students, 'teachers': subjectInfo.teachers});
 })
 console.log(subjectsFull);
-//5 не придумал
+
+//5
+
+const subjectsFullSorted = subjectsFull.sort((a,b) => {
+    return(b.teachers - a.teachers);
+});
+console.log(subjectsFullSorted);
+
