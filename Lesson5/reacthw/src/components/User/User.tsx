@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "../style/user.module.css";
+import style from "./style/user.module.css";
 import { IUserProps } from './interface/user';
 
 // Создать компонент User, из пропсов принимает username и отображает
@@ -8,7 +8,7 @@ import { IUserProps } from './interface/user';
 // функциональный реакт:
 const User = (props: IUserProps) => {
     return(
-      <div className='mainUser'> 
+      <div className={style.mainUser}> 
         {props.userName}
       </div>
     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "../style/header.module.css";
+import style from "./style/header.module.css";
 import { IHeaderProps } from './interface/header';
 import User from '../User/User';
 import Title from '../Title/Title';
