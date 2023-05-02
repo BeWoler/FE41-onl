@@ -1,0 +1,12 @@
+import React from 'react';
+import Header from './components/Header/Header';
+
+function App() {
+  return (
+    <div className="App">
+      <Header isAuth={true} />
+    </div>
+  );
+}
+
+export default App;
