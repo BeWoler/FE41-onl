@@ -14,16 +14,16 @@ import SignPage from "./Pages/MainPage/SignPage";
 function App() {
   return (
     <div className='App'>
-      <Layout>
-        {/* <MainPage />
-        <User /> */}
-        <SignPage />
-      </Layout>
+      {/* <Layout>
+        <MainPage />
+        <User />
+       <SignPage />
+      </Layout> */}
       {/* <Effect />
       <State />
-      <Memo />
+      <Memo /> */}
       <Callback />
-      <Ref />
+      {/* <Ref />
       <Uid />
       <LayoutEffect /> */}
     </div>

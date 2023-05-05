@@ -9,8 +9,8 @@ const Memo = () => {
     return arr.sort((a, b) => a - b);
   };
 
-  const sortedArr = sortArr(arr);
-  // const sortedArr = useMemo(() => sortArr(arr), [arr]);
+  // const sortedArr = sortArr(arr);
+  const sortedArr = useMemo(() => sortArr(arr), [arr]);
 
   console.log("render");
 
