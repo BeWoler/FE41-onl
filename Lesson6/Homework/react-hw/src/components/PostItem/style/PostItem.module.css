@@ -1,0 +1,10 @@
+.postItem {
+  font-weight: 500;
+  font-variant: small-caps;
+  font-style: italic;
+}
+
+.postItem:hover {
+  cursor: pointer;
+  color: lightcoral;
+}
