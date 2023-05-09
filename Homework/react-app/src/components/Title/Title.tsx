@@ -1,8 +1,8 @@
-import { ITitle } from './interface/title';
+interface ITitle {
+  content: string;
+}
 
 const Title = (props: ITitle) => {
-return (
-  <div>{props.content}</div>
-)
-}
- export default Title;
+  return <div>{props.content}</div>;
+};
+export default Title;

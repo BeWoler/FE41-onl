@@ -1,8 +1,8 @@
-import { IUser } from './interface/user';
+interface IUser {
+  userName: string;
+}
 
 const User = (props: IUser) => {
-return (
-  <div>{props.userName}</div>
-)
-}
+  return <div>{props.userName}</div>;
+};
 export default User;
