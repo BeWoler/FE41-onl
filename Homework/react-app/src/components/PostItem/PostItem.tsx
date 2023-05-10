@@ -7,15 +7,11 @@ interface IPostItemProps {
 }
 
 const PostItem = (props: IPostItemProps) => {
-  const handleClick = () => {
-    alert("id: " + props.id + " , author: " + props.author);
-  };
   return (
-    <li className={style.item} onClick={handleClick} key={props.id}>
-      <p>
-        {props.title} by {props.author}, id: {props.id}
-      </p>
-    </li>
+    <div className={style.item}>
+      <h2>{props.title}</h2>
+      <p>by {props.author}</p>
+    </div>
   );
 };
 
