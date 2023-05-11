@@ -1,3 +1,4 @@
+import { useRef } from "react";
 
 interface IPostItem {
     id: number;
@@ -6,6 +7,7 @@ interface IPostItem {
 }
 
 const PostItem = ({ id, title, author }: IPostItem) => {
+
     return (
         <div>
             <div>{id}</div>
