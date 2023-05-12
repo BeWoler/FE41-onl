@@ -1,3 +1,7 @@
+export const initialThemeContext = {
+  theme: "",
+};
+
 export const themeContext = {
   theme: "light",
 };

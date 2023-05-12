@@ -1,7 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { themeContext, userContext, authContext } from "./store/context";
+import {
+  themeContext,
+  initialThemeContext,
+  userContext,
+  authContext,
+} from "./store/context";
 import App from "./App";
 
 // Инициализировать сам контекст, например const UserContext = React.cretaeContext({});
@@ -14,18 +19,22 @@ export const AllContext = React.createContext({
   auth: {},
 });
 
+export const ThemeContext = React.createContext(initialThemeContext);
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <AllContext.Provider
-      value={{
-        theme: themeContext,
-        auth: authContext,
-        user: userContext,
-      }}>
-      <App />
-    </AllContext.Provider>
+    <ThemeContext.Provider value={themeContext}>
+      <AllContext.Provider
+        value={{
+          theme: themeContext,
+          auth: authContext,
+          user: userContext,
+        }}>
+        <App />
+      </AllContext.Provider>
+    </ThemeContext.Provider>
   </React.StrictMode>
 );

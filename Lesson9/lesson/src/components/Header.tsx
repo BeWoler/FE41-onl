@@ -1,11 +1,19 @@
-import React, { createRef, useContext } from "react";
-import { AllContext } from "..";
+import { useContext } from "react";
+import { AllContext, ThemeContext } from "..";
 import { IContext } from "../store/context.interface";
 
 const Header = () => {
-  const context: IContext = useContext<any>(AllContext);
+  const themeContext: { theme: string } = useContext<{ theme: string }>(
+    ThemeContext
+  );
 
-  return <div>{context.theme.theme}</div>;
+  const Allcontext: IContext = useContext<any>(AllContext);
+
+  return (
+    <div>
+      {themeContext.theme}/{Allcontext.user.userId}
+    </div>
+  );
 };
 
 export default Header;
