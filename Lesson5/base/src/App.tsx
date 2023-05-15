@@ -11,7 +11,6 @@ let localStorageThemeUnsorted:any = localStorage.getItem('theme');
 let localStorageTheme:any = localStorageThemeUnsorted.slice(1,-1);
 const App = () => {
     const [theme ,setTheme] = useState('light')
-    const ContextTheme = useContext(Context);
     return(
         <Context.Provider value={theme}>
         <div className={localStorageTheme}>

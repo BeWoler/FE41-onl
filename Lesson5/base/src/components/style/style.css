@@ -1,4 +1,4 @@
-.light__header {
+.dark__header {
   font-size: 20px;
   line-height: 23px;
   font-weight: 400;
@@ -28,7 +28,7 @@
   background-color: black;
 }
 
-.dark__header {
+.light__header {
   font-size: 20px;
   line-height: 23px;
   font-weight: 400;
@@ -42,10 +42,10 @@
   background-color: white;
   margin-top: 20px;
 }
-.dark__header__User {
+.light__header__User {
   color: green;
 }
-.dark__header__Title {
+.light__header__Title {
   color: red;
 }
 
