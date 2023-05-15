@@ -1,24 +1,4 @@
-.light {
-  font-size: 20px;
-  line-height: 23px;
-  font-weight: 400;
-  padding: 20px;
-  border: 3px solid rgb(255, 255, 255);
-  border-radius: 15px;
-  width: 100px;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 50px;
-}
-
-.header__User {
-  color: green;
-}
-.header__Title {
-  color: red;
-}
-
-.dark {
+.light__header {
   font-size: 20px;
   line-height: 23px;
   font-weight: 400;
@@ -29,15 +9,61 @@
   display: block;
   margin: 0 auto;
   margin-bottom: 50px;
+  background-color: rgb(0, 0, 0);
+  margin-top: 20px;
 }
-.dark__User {
+
+.header__User {
   color: green;
 }
-.dark__Title {
+.header__Title {
   color: red;
 }
 
-.post {
+.light {
+  background-color: white;
+}
+
+.dark {
+  background-color: black;
+}
+
+.dark__header {
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400;
+  padding: 20px;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-color: white;
+  margin-top: 20px;
+}
+.dark__header__User {
+  color: green;
+}
+.dark__header__Title {
+  color: red;
+}
+
+.post__light {
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  max-width: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.post__dark {
   border: 3px solid rgb(208, 208, 208);
   border-radius: 10px;
   max-width: 200px;
@@ -45,7 +71,17 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: white;
-  background-color: black;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   margin: auto;
+  margin-bottom: 20px;
+}
+
+.themeButton {
+  padding: 20px;
+  border: 3px solid rgb(255, 195, 15);
+  background-color: rgb(213, 213, 213);
+  border-radius: 15px;
+  margin: 0 auto;
+  display: block;
 }/*# sourceMappingURL=style.css.map */

@@ -2,23 +2,12 @@ import { IHeaderProps } from "../interface/header"
 import './style/style.css'
 import Title from "./Title";
 import User from "./user";
-import { Context } from "../index";
-import { useContext, useEffect, useState } from "react";
+import '../components/style/style.css'
+import { localStorageTheme } from "../App";
 
 const Header = (props: IHeaderProps) => {
-    let ContextTheme: {theme?: string} = useContext(Context);
-    const [ ThemeState, SetTheme ] = useState('light')
-    useEffect(()=> {
-        if(ThemeState === 'light'){
-            SetTheme('dark')
-        }
-        else{
-            SetTheme('light')
-        }
-        return(console.log('newTheme'))
-    }, [ContextTheme.theme])
     return(
-        <header className = {ThemeState}>
+        <header className = {`${localStorageTheme}__header`}>
         {props.isAuth === true ? <User userName="spaceStylerr"/> : <Title title="Sign In"/>}
         </header>
     )
