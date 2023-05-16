@@ -1,5 +1,6 @@
 import MainPage from '../../pages/MainPage/MainPage';
 import './App.css';
+import SignPage from "../SignForm/SignForm";
 
 function App() {
   return (
