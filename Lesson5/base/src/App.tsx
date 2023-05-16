@@ -1,18 +1,16 @@
-import { resourceLimits } from "worker_threads";
+
 import Header from "./components/Header";
-import Post from "./components/Post";
 import PostList from "./components/PostList";
 import { useContext, useState } from "react";
 import React from "react";
 import './components/style/style.css'
-const Context = React.createContext('')
-let theme:string = 'light';
+import { Context } from ".";
 let localStorageThemeUnsorted:any = localStorage.getItem('theme');
 let localStorageTheme:any = localStorageThemeUnsorted.slice(1,-1);
 const App = () => {
-    const [theme ,setTheme] = useState('light')
+    const startTheme = useContext(Context)
+    const [theme ,setTheme] = useState(startTheme)
     return(
-        <Context.Provider value={theme}>
         <div className={localStorageTheme}>
             <Header isAuth={true}/>
             <PostList/>
@@ -31,9 +29,7 @@ const App = () => {
             return(theme);
             }}/>
         </div>
-        </Context.Provider>
     )
 }
 export default App
-export {Context}
 export {localStorageTheme}
