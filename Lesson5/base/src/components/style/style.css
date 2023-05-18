@@ -84,4 +84,35 @@
   border-radius: 15px;
   margin: 0 auto;
   display: block;
+}
+
+.sign {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.signForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+}
+
+.SignInputs {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.LoginInputs {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.signButton {
+  padding: 10px;
+  max-width: 100px;
 }/*# sourceMappingURL=style.css.map */
