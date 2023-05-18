@@ -5,6 +5,7 @@ import PostList from "./components/PostList";
 import { useContext, useState } from "react";
 import React from "react";
 import './components/style/style.css'
+import { Sign } from "./components/Sign";
 const Context = React.createContext('')
 let theme:string = 'light';
 let localStorageThemeUnsorted:any = localStorage.getItem('theme');
@@ -13,6 +14,7 @@ const App = () => {
     const [theme ,setTheme] = useState('light')
     return(
         <Context.Provider value={theme}>
+            <Sign/>
         <div className={localStorageTheme}>
             <Header isAuth={true}/>
             <PostList/>
