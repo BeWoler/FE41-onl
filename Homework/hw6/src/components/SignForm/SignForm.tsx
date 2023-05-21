@@ -11,7 +11,6 @@ const SignForm = (props: ISignForm) => {
       <Input type="text" placeholder='password' handler={() => { }} value='' />
       {!props.signIn && <Input type="text" placeholder='First name' handler={() => { }} value='' />}
       {!props.signIn && <Input type="text" placeholder='username' handler={() => { }} value='' />}
-
       <Button handler={() => { }} value={props.signIn ? 'Sign in ' : 'Sign up'} />
     </form>
   )

@@ -1,15 +1,13 @@
-import { useRef } from "react";
+import { IPostItem } from "./post.interface";
 
-interface IPostItem {
-    id: number;
-    title: string;
-    author: string;
-}
+import './post.css'
+
 
 const PostItem = ({ id, title, author }: IPostItem) => {
 
+
     return (
-        <div>
+        <div className="post">
             <div>{id}</div>
             <div>{title}</div>
             <div>{author}</div>

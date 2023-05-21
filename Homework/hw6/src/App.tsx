@@ -1,27 +1,25 @@
 
 import React from 'react';
-import SignPage from './Pages/MainPage/SignPage';
 import Layout from './components/Layout/Layout';
-import MainPage from './components/MainPage/MainPage';
+import AppRouter from './components/AppRouter.tsx/AppRouter';
+import Nav from './components/Nav/Nav';
+
 
 
 export const ThemeContext = React.createContext({});
 
 const theme = {
-  theme: 'dark'
-
+  theme: 'dark',
+  setTheme: ()=> {},
 }
 function App() {
   return (
-    <div className="App">
-      <ThemeContext.Provider value={theme}>
-        <Layout>
-          {/* <MainPage /> */}
-          <SignPage />
-        </Layout>
-      </ThemeContext.Provider>
-
-    </div>
+    <ThemeContext.Provider value={theme}>
+      <Layout>
+        <Nav />
+        <AppRouter />
+      </Layout>
+    </ThemeContext.Provider>
   );
 }
 
