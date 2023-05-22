@@ -1,0 +1,17 @@
+button {
+    max-width: 150px;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: #00CED1;
+    box-shadow: 4px 4px 30px  #00CED1;
+}
+
+.indent {
+    margin-bottom: 10px;
+}

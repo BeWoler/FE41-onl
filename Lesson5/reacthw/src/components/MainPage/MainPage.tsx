@@ -17,7 +17,7 @@ const data = [
 const MainPage = () => {
     return (
         <div>
-            <PostList posts={data}/>
+            Main
         </div>
     );
 };
