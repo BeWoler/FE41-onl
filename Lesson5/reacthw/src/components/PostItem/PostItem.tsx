@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { IPostItemProps } from './interface/postitem.interface';
+import { useParams } from 'react-router-dom';
 
 interface IPostItemList {
     post: IPostItemProps;
 }
 
-const PostItem = ({post}: IPostItemList) => {
+const PostItem = () => {
+    const params = useParams();
+
+    const [post, setPost] = useState({
+        userId: 0,
+        id: 0,
+        title: "",
+        body: ""
+
+    })
+
+    useEffect(() => {
+        fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
+        .then(res => res.json())
+        .then((json) => setPost(json))
+    }, [params.id]);
     
     return (
-        <div onClick={() => alert("ID: " + post.id + " Автор: " + post.author)}>
+        <div>
             <li key={post.id}>
-                {post.title}.{post.author}
+                <div>{post.id}</div>
+                <h2>{post.title}</h2>
+                <p>{post.body}</p>
             </li>
         </div>
     );

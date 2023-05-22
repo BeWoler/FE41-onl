@@ -4,6 +4,10 @@ import MainPage from "../MainPage/MainPage";
 import SignForm from "../SignForm/SignForm";
 import '../../';
 import { ThemContext } from "../..";
+import { Route, Routes } from "react-router-dom";
+import Nav from "../Nav/Nav";
+import PostItem from "../PostItem/PostItem";
+import PostsPage from "../PostsPage/PostsPage";
 
 function App() {
   const [pageForm, setPageForm] = useState<boolean>(false);
@@ -37,16 +41,24 @@ function App() {
 
   return (
     <div className= {`layout ${ theme ? context.dark : ""}`} >
-      {/* <Header isAuth = {true} />
-      <MainPage/> */}
-      <SignForm 
-        handler={(e: any) => {
-          e.preventDefault();
-          onClickChangeForm();
-        }}
-        signIn={pageForm}
-      />
-      <button  onClick={setDarkTheme}>Change theme</button> 
+      <Nav/>
+      <Routes>
+        <Route path="/header" element={<Header isAuth = {true} />}/>
+        <Route path="/" element={<MainPage/>}/>
+        <Route path="/posts">
+          <Route index element={<PostsPage />} />
+          <Route path=':id' element={<PostItem />} />
+        </Route> 
+        <Route path="/form" element={<SignForm 
+          handler={(e: any) => {
+            e.preventDefault();
+            onClickChangeForm();
+          }}
+          signIn={pageForm}
+        />}/>
+        <Route path='*' element={<div>404 - Not Found</div>} />
+      </Routes>
+      <button  onClick={setDarkTheme}>Change theme</button>
     </div>
   );
 }
