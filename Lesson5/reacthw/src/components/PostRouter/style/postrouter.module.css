@@ -1,0 +1,6 @@
+.post{
+    display: flex;
+    border: 1px solid orange;
+    width: 300px;
+    height: 100px;
+}
