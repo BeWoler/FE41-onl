@@ -3,8 +3,8 @@ import './style/style.css'
 import Title from "./Title";
 import User from "./user";
 import '../components/style/style.css'
-import { localStorageTheme } from "../App";
-import { Context } from "../App";
+import { localStorageTheme } from "../pages/mainPage";
+import { Context } from "../pages/mainPage";
 import { useContext } from "react";
 const Header = (props: IHeaderProps) => {
     const ContextTheme = useContext(Context);

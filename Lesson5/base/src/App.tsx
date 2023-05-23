@@ -1,39 +1,21 @@
-import { resourceLimits } from "worker_threads";
-import Header from "./components/Header";
+import { Route, Routes } from "react-router-dom";
+import MainPage from "./pages/mainPage";
+import { PostPage } from "./pages/postList";
+import { Sign } from "./pages/Sign";
 import Post from "./components/Post";
-import PostList from "./components/PostList";
-import { useContext, useState } from "react";
-import React from "react";
-import './components/style/style.css'
-const Context = React.createContext('')
-let theme:string = 'light';
-let localStorageThemeUnsorted:any = localStorage.getItem('theme');
-let localStorageTheme:any = localStorageThemeUnsorted.slice(1,-1);
+import { data } from "./components/PostList";
+
 const App = () => {
-    const [theme ,setTheme] = useState('light')
-    return(
-        <Context.Provider value={theme}>
-        <div className={localStorageTheme}>
-            <Header isAuth={true}/>
-            <PostList/>
-            <input type="button" className='themeButton' value={`theme: ${localStorageTheme}`} onClick={function(){if(theme === 'light'){
-                setTheme('dark')
-                localStorage.setItem('theme', JSON.stringify(theme))
-                localStorageTheme = localStorage.getItem('theme')?.slice(1,-1);
-                console.log(localStorageTheme);
-            }
-            else{
-                setTheme('light')
-                localStorage.setItem('theme', JSON.stringify(theme))
-                localStorageTheme = localStorage.getItem('theme')?.slice(1,-1);
-                console.log(localStorageTheme);
-            }
-            return(theme);
-            }}/>
-        </div>
-        </Context.Provider>
+   return(
+    <div>
+     <Routes>
+        {data.map((item) => {return(<Route path={`posts/${item.id}`} element={<Post id={item.id} author={item.author} title={item.title}/>}/>)})}
+        <Route path="/" element={<MainPage/>}/>
+        <Route path="/Posts" element={<PostPage/>}/>
+        <Route path="/sign" element={<Sign/>}/>
+        <Route path="*" element={<div>Page not found</div>}/>
+     </Routes>
+     </div>
     )
 }
-export default App
-export {Context}
-export {localStorageTheme}
+export default App;
