@@ -1,3 +1,3 @@
 export const themeContext = {
-   dark: "gray",
+   theme: "purple",
 };

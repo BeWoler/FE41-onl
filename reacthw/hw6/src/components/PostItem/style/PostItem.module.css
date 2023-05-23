@@ -1,5 +1,5 @@
 .listitem{
-  border: 3px solid #577492;
+  border: 3px solid rgb(115 99 135);
   list-style: none;
   cursor: pointer;
 }
@@ -8,7 +8,7 @@
   font-size: 40px;
   line-height: 44px;
   font-weight: 700;
-  color: #577492;
+  color: rgb(115 99 135);
   text-decoration: none;
   text-transform: capitalize;
 }
