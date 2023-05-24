@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext, useState } from "react";
+import "./App.css";
 import Header from "../Header/Header";
 import PostItem from '../PostItem/PostItem';
 import PostList from '../PostList/PostList';
@@ -24,6 +25,5 @@ const App = () => {
         //   <MainPage />
         // </div>
     );
-};
-
+  
 export default App;
