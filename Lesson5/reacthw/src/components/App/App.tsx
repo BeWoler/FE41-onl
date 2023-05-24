@@ -1,13 +1,29 @@
 import React, { useContext, useState } from "react";
 import "./App.css";
 import Header from "../Header/Header";
-// import PostItem from '../PostItem/PostItem';
-// import PostList from '../PostList/PostList';
-import MainPage from '../../Pages/MainPage/MainPage';
-import { ThemeContext } from "../..";
+import PostItem from '../PostItem/PostItem';
+import PostList from '../PostList/PostList';
+// import MainPage from '../../Pages/MainPage/MainPage';
+
+import AppRouter from "../../components/AppRouter/AppRouter";
+import Nav from "../../components/Nav/Nav";
+
 
 const App = () => {
-  return <div className="App">{/* <Header isAuth={true} /> */}</div>;
-};
+    return(
+      <>
+      <Nav />
+      <AppRouter />
+      </>
+      
+      
+        // <div className='mainApp'>
+        //     <Header isAuth={true} />
+        // </div>
 
+        // <div>
+        //   <MainPage />
+        // </div>
+    );
+  
 export default App;
