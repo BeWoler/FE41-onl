@@ -1,0 +1,13 @@
+.app {
+    padding: 20px;
+  }
+  
+  .app.light {
+    background-color: #f2f2f2;
+    color: #000000;
+  }
+  
+  .app.dark {
+    background-color: #333333;
+    color: #ffffff;
+  }
