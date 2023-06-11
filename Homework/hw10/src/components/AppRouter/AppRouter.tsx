@@ -15,7 +15,7 @@ const AppRouter = () => {
                 <Route path=":id" element={<Post />} />
             </Route>
 
-            <Route path="/sign" element={<SignPage isAuth={true} />} />
+            <Route path="/sign" element={<SignPage isAuth={false} />} />
 
             <Route path="*" element={<div>404 - Not Found</div>} />
         </Routes>
